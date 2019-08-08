@@ -18,11 +18,12 @@ class CommentList extends Component {
         }
     }
 
-
     render() {
+        const {comments} = this.props
+        console.log(comments,'---------')
         return (
             <div className="comment-list">
-                {this.props.comments.map((comment, i) =>
+                {comments.map((comment, i) =>
                     <Comment 
                         comment={comment} 
                         key={i} 

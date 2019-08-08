@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-    width: 500px;
+    width: 800px;
     margin: 10px auto;
     font-size: 14px;
     background-color: #fff;
@@ -92,11 +92,17 @@ body {
 
 .comment .comment-user {
     flex-shrink: 0;
+    font-weight: bold;
+}
+
+.comment .comment-content {
+    font-weight: bold;
+    padding-left: 10px;
 }
 
 .comment-user {
     color: #00a3cf;
-    /* font-style: italic; */
+    font-style: italic;
 }
 
 .comment-createdtime {
