@@ -23,6 +23,7 @@ class CommentListContainer extends Component {
     // 从localStorage中加载评论
     let comments = localStorage.getItem('comments')
     comments = comments ? JSON.parse(comments) : []
+    console.log(comments)
     // this.props.initComments 是 connect 传进来的
     // 可以帮我们把数据初始化到 state 里面去
     this.props.initComments(comments)
@@ -46,7 +47,6 @@ class CommentListContainer extends Component {
 
   render() {
     const {comments} = this.props
-    console.log(comments,'+++++++++++')
     return (
       <CommentList
         comments={comments}

@@ -48,8 +48,8 @@ class CommentInputContainer extends Component {
         if (!comment.content) return alert('请输入评论内容')
         // 新增评论保存到localStorage中
         const { comments } = this.props
-        // const newComments = [comment, ...comments]
-        const newComments = comments.unshift(comment)
+        const newComments = [...comments, comment]
+        // const newComments = comments.unshift(comment)   此处要小心，unshift返回的是新数组的长度啊！！！！
         localStorage.setItem('comments', JSON.stringify(newComments))
         // this.props.onSubmit 是 connect 传进来的
         // 会 dispatch 一个 action 去新增评论
